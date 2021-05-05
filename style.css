@@ -1,0 +1,148 @@
+/*  ANGELES, Ma. Mikaela A.
+    CS 192 C2 Lab 2    
+    style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@500&display=swap');
+
+/* GENERAL FORMATTING */
+h1, h2, h3, h4, h5 {
+    font-family: "Playfair Display", serif;
+    color: white;
+    letter-spacing: 0.75pt;
+}
+
+h1 {
+    font-size: 28pt;
+}
+
+header {
+    background-color: #9BD1E5;
+    padding: 20px 50px;
+}
+
+body {
+    background-color: #9BD1E5;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+select, button {
+    font-family: "Montserrat", sans-serif;
+}
+
+textarea, input {
+    font-family: "Montserrat", sans-serif;
+    background-color: transparent;
+    resize: none;
+    border-color: transparent;
+}
+
+select:disabled, button:disabled, option:disabled {
+    display: none;
+}
+
+i {
+    color: darkslategray;
+    font-size: large;
+}
+
+/* SCROLLBAR FORMATTING */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F1F1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* NOTES FORMATTING */
+@media (min-width: 710px) and (max-width: 1090px) {
+    .notes-board {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1090px) and (max-width: 1200px) {
+    .notes-board {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .notes-board {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .notes-board {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1920px) {
+    .notes-board {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+.notes-board {
+    display: grid;
+    background-color: #6A8EAE;
+    color: white;
+    margin: 50px;
+    padding: 35px 35px;
+    border-radius: 10px;
+}
+
+.note {
+    background-color: #FFFF82;
+    padding: 10px;
+    margin-bottom: 25px;
+    width: 225px;
+    box-shadow: 7px 7px 5px #39536A;
+    transition: 0.3s;
+}
+
+.note:hover {
+    transform: scale(1.05);
+    position: relative;
+    z-index: 5;
+}
+
+.note:hover > .note-container > .delete-btn {
+    display: block;
+}
+
+.note-title {
+    height: 20px;
+    width: 170px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.note-content {
+    height: 150px;
+    width: 200px;
+    padding: 10px;
+}
+
+.delete-btn {
+    float: right;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+<!-- ANGELES, Ma. Mikaela A. -->
+<!-- CS 192 C2 Lab 2 -->
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CS 192 LAB 2 - Sticky Notes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sticky Notes!</h1>
+        
+        <select id="actions">
+            <option value="none">--</option>
+            <option value="add">Add new note</option>
+            <option id="disabled-delete" value="delete-all" disabled>Delete all notes</option>
+        </select>
+
+        <button id="go" onclick="doAction()">Go</button>
+        <button id="lock" onclick="lockEditing()">Lock editing</button>
+        
+    </header>
+
+    <div class="notes-board" id="notes-board"></div>
+
+    <!-- Main JS script -->
+    <script src="main.js"></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/5f3c6874e8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
