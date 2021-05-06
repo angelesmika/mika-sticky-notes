@@ -23,7 +23,7 @@ function addNote(index, isNew) {
 	// im sorry i had to pass a string and the quotes were making my mind explode
 	newNote.innerHTML = '<div class="note-container">'
 	+		'<button id="delete" onclick="deleteNote(note' + index + ', &#39;' + index + '&#39;)" class="delete-btn"><i class="far fa-times-circle"></i></button>'
-	+		'<input type="text" onkeyup="updateStorage(&#39;title' + index + '&#39;)" id="title' + index + '" class="note-title" placeholder="Enter note title here"></textarea>'
+	+		'<input type="text" onkeyup="updateStorage(&#39;title' + index + '&#39;)" id="title' + index + '" class="note-title" placeholder="Enter note title here"></input>'
 	+		'<textarea onkeyup="updateStorage(&#39;content' + index + '&#39;)" id="content' + index + '" class="note-content" placeholder="Enter note here"></textarea>'
 	+'</div>'
 
