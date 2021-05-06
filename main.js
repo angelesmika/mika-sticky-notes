@@ -43,10 +43,7 @@ function addNote(index, isNew) {
 
 // RETRIEVING STICKY NOTES FROM LOCAL STORAGE UPON LOAD
 if (window.localStorage.length > 0) {
-	deleteAllBtn.removeAttribute("disabled");
-	
-	totalNotes = window.localStorage.getItem("totalNotes");
-
+        totalNotes = window.localStorage.getItem("totalNotes");
 
 	for (let i = 0; i <= totalNotes; i++) {
 		let storedTitle = window.localStorage.getItem("title" + String(i));
@@ -55,6 +52,7 @@ if (window.localStorage.length > 0) {
 			addNote(i, false);
 			document.getElementById("title" + String(i)).value = storedTitle;
 			document.getElementById("content" + String(i)).value = storedContent;
+                        deleteAllBtn.removeAttribute("disabled");
 		}
 	}
 }
