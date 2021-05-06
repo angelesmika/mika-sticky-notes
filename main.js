@@ -147,6 +147,7 @@ function deleteNote(id, index) {
 		deleteAllBtn.setAttribute("disabled", "disabled");
 		totalNotes = 0;
 		window.localStorage.clear();
+                return;
 	}
 
 	updateTotalNotesStorage();
